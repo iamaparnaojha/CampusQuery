@@ -3715,171 +3715,10 @@ FOR INNOVATIVE TEACHING AND REALTIME LEARNING PROCESS  </h3><br><br><br>
 
 
 
+<!-- Chatbot has been moved to React component at client/src/pages/Chatbot.jsx -->
 
 
-//chatbot 
 
-<!-- Simple Chatbot Widget Start -->
-<div id="chatbot-widget" class="circle">
-    <div id="chatbot-circle-btn" onclick="toggleChatbot()">
-        <span class="chatbot-circle-icon">💬</span>
-    </div>
-    <div id="chatbot-body">
-        <div id="chatbot-header">
-            Chat with us <span id="chatbot-close" onclick="toggleChatbot(event)">×</span>
-        </div>
-        <div id="chatbot-messages"></div>
-        <div id="chatbot-input-area">
-            <input type="text" id="chatbot-input" placeholder="Type your message..." onkeydown="if(event.key==='Enter'){sendMessage();}">
-            <button onclick="sendMessage()">Send</button>
-        </div>
-    </div>
-</div>
-<style>
-        #chatbot-widget {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            z-index: 9999;
-            font-family: 'Segoe UI', Arial, sans-serif;
-        }
-        #chatbot-widget.circle #chatbot-body {
-            display: none;
-        }
-        #chatbot-widget.circle #chatbot-circle-btn {
-            display: flex;
-        }
-        #chatbot-circle-btn {
-            width: 64px;
-            height: 64px;
-            background: #2a4d8f;
-            border-radius: 50%;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.18);
-            align-items: center;
-            justify-content: center;
-            display: none;
-            cursor: pointer;
-            transition: background 0.2s;
-            position: relative;
-        }
-        .chatbot-circle-icon {
-            font-size: 32px;
-            color: #fff;
-            margin: auto;
-        }
-        #chatbot-widget.open #chatbot-body {
-            display: flex;
-            flex-direction: column;
-            width: 400px;
-            height: 520px;
-            background: #fff;
-            border-radius: 16px 16px 0 0;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.18);
-            overflow: hidden;
-            animation: chatbotOpen 0.2s;
-        }
-        #chatbot-widget.open #chatbot-circle-btn {
-            display: flex;
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            z-index: 10000;
-            pointer-events: none;
-            opacity: 0;
-        }
-        #chatbot-header {
-            background: #2a4d8f;
-            color: #fff;
-            padding: 12px 16px;
-            font-weight: 600;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-radius: 16px 16px 0 0;
-            font-size: 17px;
-        }
-        #chatbot-close {
-            font-size: 20px;
-            font-weight: 400;
-            margin-left: 10px;
-            cursor: pointer;
-        }
-        #chatbot-messages {
-            flex: 1;
-            padding: 12px;
-            overflow-y: auto;
-            font-size: 15px;
-            background: #f8f9fa;
-        }
-        #chatbot-input-area {
-            display: flex;
-            border-top: 1px solid #e0e0e0;
-            background: #fff;
-            padding: 8px;
-        }
-        #chatbot-input {
-            flex: 1;
-            border: 1px solid #bfc9d1;
-            border-radius: 6px;
-            padding: 7px 10px;
-            font-size: 15px;
-            outline: none;
-        }
-        #chatbot-input-area button {
-            margin-left: 8px;
-            background: #2a4d8f;
-            color: #fff;
-            border: none;
-            border-radius: 6px;
-            padding: 7px 16px;
-            font-size: 15px;
-            cursor: pointer;
-            transition: background 0.2s;
-        }
-        #chatbot-input-area button:hover {
-            background: #18305c;
-        }
-        .chatbot-msg-user {
-            display: flex;
-            justify-content: flex-end;
-            margin: 16px 0 4px 0;
-        }
-        .chatbot-msg-user > span {
-            background: #2a4d8f;
-            color: #fff;
-            padding: 10px 16px;
-            border-radius: 18px 18px 4px 18px;
-            max-width: 75%;
-            word-break: break-word;
-            box-shadow: 0 2px 8px rgba(42,77,143,0.08);
-            font-size: 15px;
-            display: inline-block;
-            margin-left: auto;
-        }
-        .chatbot-msg-bot {
-            display: flex;
-            justify-content: flex-start;
-            margin: 4px 0 16px 0;
-        }
-        .chatbot-msg-bot > span {
-            background: #e0e3ea;
-            color: #222;
-            padding: 10px 16px;
-            border-radius: 18px 18px 18px 4px;
-            max-width: 75%;
-            word-break: break-word;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.10);
-            font-size: 15px;
-            display: inline-block;
-        }
-        @keyframes chatbotOpen {
-            from { transform: scale(0.8); opacity: 0; }
-            to { transform: scale(1); opacity: 1; }
-        }
-</style>
-<script>
-        // Toggle chatbot open/close
-        function toggleChatbot(e) {
             var widget = document.getElementById('chatbot-widget');
             var wasOpen = widget.classList.contains('open');
             widget.classList.toggle('open');
@@ -3951,9 +3790,7 @@ FOR INNOVATIVE TEACHING AND REALTIME LEARNING PROCESS  </h3><br><br><br>
             var widget = document.getElementById('chatbot-widget');
             widget.classList.add('circle');
             document.getElementById('chatbot-circle-btn').style.display = 'flex';
-        });
-</script>
-<!-- Simple Chatbot Widget End -->
+
 </b></b><div class="VIpgJd-ZVi9od-aZ2wEe-wOHMyf"><div class="VIpgJd-ZVi9od-aZ2wEe-OiiCO"><svg xmlns="http://www.w3.org/2000/svg" class="VIpgJd-ZVi9od-aZ2wEe" width="96px" height="96px" viewBox="0 0 66 66"><circle class="VIpgJd-ZVi9od-aZ2wEe-Jt5cK" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle></svg></div></div><span id="PING_IFRAME_FORM_DETECTION" style="display: none;"></span></body></html>
 
 
